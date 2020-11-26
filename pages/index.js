@@ -19,23 +19,24 @@ export default function Home() {
       setStatusText('ENTER TEXT TO BEGIN YOUR SEARCH');
       setCharList([]);
       setLoading(false);
+    }else{
+      axios.get('/api/marvel',{
+        params :{
+          searchText: searchText
+        }
+      }).then((result) => {
+        if(result.data.data.results.length > 0){
+          setCharList(result.data.data.results);
+          setLoading(false);
+        }else{
+          setCharList([])
+          setStatusText('NO RESULTS FOUND');
+          setLoading(false);
+        }
+      }).catch(() =>{
+        console.error('An Error Occured with the API call to Marvel')
+      })
     }
-    axios.get('/api/marvel',{
-      params :{
-        searchText: searchText
-      }
-    }).then((result) => {
-      if(result.data.data.results.length > 0){
-        setCharList(result.data.data.results);
-        setLoading(false);
-      }else{
-        setCharList([])
-        setStatusText('NO RESULTS FOUND');
-        setLoading(false);
-      }
-    }).catch(() =>{
-      console.error('An Error Occured with the API call to Marvel')
-    })
  }
 
   return (

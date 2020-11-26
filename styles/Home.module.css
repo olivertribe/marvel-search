@@ -88,17 +88,18 @@ box-shadow: 0 5px 15px rgba(247, 40, 25, .4);
   height: 20%;
   font-size: 40px;
   padding: 0.25em 0.5em;
-  padding-top: 5%;
+  padding-top: 7%;
   padding-bottom: 5%;
+  background: transparent;
+  border: none;
   font-family: MarvelRegular;
   text-transform: uppercase;
   text-align: center;
   border: solid;
-
+  border-color: grey;
 }
 .main input:focus{
   background: transparent;
-  border: solid;
 
 }
 
@@ -110,7 +111,7 @@ box-shadow: 0 5px 15px rgba(247, 40, 25, .4);
   font-weight: bold;
   transition-duration: 0.4s;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.1);
-  width: 25%;
+  width: 32%;
   height: 50%;
   border: none;
   outline: none;
