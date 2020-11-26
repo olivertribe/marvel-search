@@ -20,7 +20,6 @@ export default function Home() {
         searchText: searchText
       }
     }).then((result) => {
-      console.log(result)
       if(result.data.data.results.length > 0){
         setCharList(result.data.data.results);
         setLoading(false);
