@@ -90,16 +90,15 @@ box-shadow: 0 5px 15px rgba(247, 40, 25, .4);
   padding: 0.25em 0.5em;
   padding-top: 5%;
   padding-bottom: 5%;
-  background: transparent;
-  border: none;
   font-family: MarvelRegular;
   text-transform: uppercase;
   text-align: center;
+  border: solid;
+
 }
 .main input:focus{
   background: transparent;
-  border: none;
-  outline: none;
+  border: solid;
 
 }
 

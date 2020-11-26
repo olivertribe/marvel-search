@@ -15,6 +15,11 @@ export default function Home() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
+    if(searchText == ''){
+      setStatusText('ENTER TEXT TO BEGIN YOUR SEARCH');
+      setCharList([]);
+      setLoading(false);
+    }
     axios.get('/api/marvel',{
       params :{
         searchText: searchText
@@ -29,7 +34,7 @@ export default function Home() {
         setLoading(false);
       }
     }).catch(() =>{
-      console.log('An Error Occured with the API call to Marvel')
+      console.error('An Error Occured with the API call to Marvel')
     })
  }
 
@@ -44,7 +49,9 @@ export default function Home() {
             <span>MARVEL CHARACTER SEARCH</span>
           </h1>
           <form onSubmit={handleSubmit}>
-            <input placeholder="SEACH MARVEL DATABASE" onChange={e => setSearchText(e.target.value)}></input>
+            <input placeholder="SEARCH MARVEL DATABASE" onChange={e => setSearchText(e.target.value)}></input>
+            <br></br>
+            <br></br>
             <button type="submit">SEARCH</button>
           </form>
           <div className={styles.grid}>
