@@ -3,7 +3,7 @@
 https://developer.marvel.com/account
 2. Create a file in the project root directory called next.config.js
 containing the below:
-
+```
 module.exports = {
     env: {
         publicKey: "YOUR-PUBLIC-KEY-HERE", // This is your Public Key from Marvel
@@ -11,7 +11,7 @@ module.exports = {
         limit: 30, // This sets the response limit from the API (how many cards)
     },
   }
-
+```
 Marvel API docs: https://developer.marvel.com/docs
 
 ## Getting Started
