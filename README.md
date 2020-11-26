@@ -1,5 +1,22 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+
+## Marvel API Config
+1. Get an API key from Marvel
+https://developer.marvel.com/account
+2. Create a file in the project root directory called next.config.js
+containing the below:
+
+module.exports = {
+    env: {
+        publicKey: "YOUR-PUBLIC-KEY-HERE", // This is your Public Key from Marvel
+        privateKey: "YOUR-PRIVATE-KEY-HERE", // This is your Private Key from Marvel
+        limit: 30, // This sets the response limit from the API (how many cards)
+    },
+  }
+
+Marvel API docs: https://developer.marvel.com/docs
+
 ## Getting Started
 
 First, run the development server:
