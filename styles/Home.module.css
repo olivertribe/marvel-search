@@ -96,7 +96,7 @@ box-shadow: 0 5px 15px rgba(247, 40, 25, .4);
   text-transform: uppercase;
   text-align: center;
   border: solid;
-  border-color: grey;
+  border-color: grey; 
 }
 .main input:focus{
   background: transparent;

@@ -50,7 +50,7 @@ export default function Home() {
             <span>MARVEL CHARACTER SEARCH</span>
           </h1>
           <form onSubmit={handleSubmit}>
-            <input placeholder="SEARCH MARVEL DATABASE" onChange={e => setSearchText(e.target.value)}></input>
+            <input placeholder="SEARCH DATABASE" onChange={e => setSearchText(e.target.value)}></input>
             <br></br>
             <br></br>
             <button type="submit">SEARCH</button>
